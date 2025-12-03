@@ -9,8 +9,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: gitops/overlays/dashboards
-    repoURL: https://github.com/acirom/mlops-monitoring/grafana.git
+    path: grafana/gitops/overlays/dashboards
+    repoURL: https://github.com/acirom/mlops-monitoring.git
     targetRevision: main
   syncPolicy:
     automated:
