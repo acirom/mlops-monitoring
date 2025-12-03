@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: custom-grafana
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: grafana
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: gitops/overlays/dashboards
+    repoURL: https://github.com/acirom/mlops-monitoring/grafana.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
