@@ -11,7 +11,7 @@ spec:
   source:
     path: gitops/overlays/dashboards
     repoURL: https://github.com/acirom/mlops-monitoring/grafana.git
-    targetRevision: HEAD
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
