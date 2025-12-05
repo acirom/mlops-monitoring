@@ -5,7 +5,6 @@ kind: Kustomization
 # https://www.redhat.com/en/blog/custom-grafana-dashboards-red-hat-openshift-container-platform-4
 
 resources:
-  - subscription.yaml
   - grafana.yaml
   - secret.yaml
   - rolebindings.yaml
