@@ -2,11 +2,13 @@ apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDatasource
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
-  name: prometheus-grafanadatasource
+    argocd.argoproj.io/sync-wave: "2"
+  name: prometheus
+  namespace: my-grafana
 spec:
   instanceSelector:
     matchLabels:
+      app.kubernetes.io/instance: custom-grafana
       dashboards: my-grafana
   valuesFrom:
     - targetPath: "secureJsonData.httpHeaderValue1"
