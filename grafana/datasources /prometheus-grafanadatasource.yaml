@@ -3,6 +3,8 @@ kind: GrafanaDataSource
 metadata:
   name: prometheus-grafanadatasource
   namespace: my-grafana
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   datasources:
     - access: proxy
