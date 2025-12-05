@@ -20,4 +20,3 @@ spec:
   instanceSelector:
     matchLabels:
       dashboards: grafana
-  name: prometheus-grafanadatasource.yaml
