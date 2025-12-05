@@ -3,6 +3,5 @@ kind: Kustomization
 
 resources:
   - ../../base
-  - ../../../datasources/prometheus-grafanadatasource.yaml
   - cluster_metrics.grafanadashboard.yaml
   - infra_metrics.grafanadashboard.yaml
