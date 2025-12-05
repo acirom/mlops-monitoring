@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: custom-grafana
-  namespace: openshift-gitops
+  namespace: my-grafana
 spec:
   destination:
     namespace: my-grafana
