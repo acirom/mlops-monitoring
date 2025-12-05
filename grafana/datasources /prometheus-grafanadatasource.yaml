@@ -19,4 +19,4 @@ spec:
       url: 'https://thanos-querier.openshift-monitoring.svc.cluster.local:9091'
   instanceSelector:
     matchLabels:
-      dashboards: grafana
+      app.kubernetes.io/instance: custom-grafana
