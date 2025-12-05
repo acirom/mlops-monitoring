@@ -9,6 +9,7 @@ spec:
   instanceSelector:
     matchLabels:
       app.kubernetes.io/instance: custom-grafana
+      app: grafana
       dashboards: my-grafana
   valuesFrom:
     - targetPath: "secureJsonData.httpHeaderValue1"
@@ -37,7 +38,7 @@ metadata:
   annotations:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   template:
     spec:
